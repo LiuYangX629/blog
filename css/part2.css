@@ -1,0 +1,161 @@
+/*---------------------------------2019/5/13 9:33------------------------------------*/
+body{
+    background:#E9EAED;
+}
+
+/*-------------------------------2019/5/14 15:03------------aboutMe----------------------*/
+.interface{
+    width: 1160px;
+    height: 550px;
+    margin:auto;
+    padding: 20px 40px;
+    background: #FFF;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.topBox{
+    width: 990px;
+    height: 150px;
+    float: left;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.topBox h4{
+    font-size: 20px;
+    font-family: 宋体;
+    margin: 10px;
+}
+.topBox>li{
+    font-size:15px ;
+    margin: 10px;
+    font-family: 宋体;
+    list-style: none;
+    display: block;
+
+}
+.topBox .TX{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+
+
+.bottomBox{
+    width: 990px;
+    height: 150px;
+    float: left;
+    display:inline-block;
+
+}
+.bottomBox h3, p{
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #e3e3e3;
+
+}
+
+/*-------------------------------------navigation------------------------------------------*/
+.con{
+    width: 1240px;
+    height: 530px;
+    margin:0 auto;
+    background: #FFF;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.conTop{
+    width: 1160px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.conTop >h3{
+    border-bottom: 1px solid #e3e3e3;
+    margin: 5px;
+}
+
+.conMid{
+    width: 1200px;
+    height: 30px;
+    background:#E9EAED ;
+}
+.conBottom{
+    width: 1160px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.conBottom >h3{
+    border-bottom: 1px solid #e3e3e3;
+    margin: 5px;
+}
+/*------------------------------time-------------2019.5.15 21:09-*/
+
+ul span{
+    line-height: 32px;
+    padding-right: 40px;
+    color: #999;
+    font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    position: relative;
+}
+ul span:after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 20px;
+    background: #e0dfdf;
+    right: 18px;
+}
+.interface li{
+    padding-top: 10px;
+}
+.interface li a{
+    font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: black;
+    position: relative;
+
+}
+.interface li a:before{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid white;
+    box-shadow: 0px 0px 2px black;
+    content: "";
+    left:-25px;
+    top:4px;
+    position: absolute;
+}
+
+.interface li:hover>:before{
+    background: black;
+}
+.page{
+    margin-top: 20px;
+    margin-left: 500px;
+    margin-bottom: 100px;
+}
+.page div{
+    text-align: center;
+}
+.page a{
+    float: left;
+    background:#E9EAED;
+    color: #666;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    padding: 5px;
+    margin-right: 20px;
+}
+.page div a:hover{
+    background: black;
+    color: white;
+}
+/******************************2019/5/16****************************************/
