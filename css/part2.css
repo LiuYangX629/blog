@@ -159,3 +159,345 @@ ul span:after{
     color: white;
 }
 /******************************2019/5/16****************************************/
+
+.gr{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+
+
+}
+.gr .rightone{
+    height: auto;
+    margin-top: 10px;
+}
+.gr .righttwo{
+    height: auto;
+}
+.gr .rightfour{
+    height: auto;
+}
+.grliftone{
+    margin-top: 20px;
+    width: 860px;
+
+    padding: 20px;
+    background: white;
+}
+.grliftone img{
+    width: 120px;
+    height: 100px;
+    margin-right: 20px;
+    float: left;
+}
+.grliftone h2{
+    margin-bottom: 20px;
+}
+.gr .liftlast{
+    float: left;
+}
+.rightone{
+    overflow: hidden;
+}
+.biaoqian ul a{
+    display: block;
+    line-height: 24px;
+    float: left;
+    padding: 3px 10px;
+    margin: 10px 5px 0 0;
+    background: black;
+}
+.biaoqian ul a:nth-child(1){
+    background: #036564;
+}
+.biaoqian ul a:nth-child(2){
+    background: #EB6841;
+}
+.biaoqian ul a:nth-child(3){
+    background: #3FB8AF;
+}
+.biaoqian ul a:nth-child(4){
+    background: #FE4365;
+}
+.biaoqian ul a:nth-child(5){
+    background: #FE4365;
+}
+.biaoqian ul a:nth-child(6){
+    background: #FC9D9A;
+}
+.biaoqian ul a:nth-child(7){
+    background: #EDC951;
+}
+.biaoqian ul a:nth-child(8){
+    background: #C8C8A9;
+}
+.biaoqian ul a:nth-child(9){
+    background: #83AF9B;
+}
+.biaoqian ul a:nth-child(10){
+    background: #8A9B0F;
+}
+.biaoqian ul a:nth-child(11){
+    background: #EB6841;
+}
+.biaoqian ul a:nth-child(12){
+    background: #3FB8AF;
+}
+.biaoqian ul a:nth-child(13){
+    background: #FE4365;
+}
+.biaoqian ul a:nth-child(14){
+    background: #FC9D9A;
+}
+.biaoqian ul a:nth-child(15){
+    background: #EDC951;
+}
+.biaoqian ul a:nth-child(16){
+    background: #3299BB;
+}
+.biaoqian ul a:hover{
+    text-shadow:1px 1px 1px #000;
+}
+
+/********************************************/
+.liftlast{
+    width: 860px;
+
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+}
+.liftlastbox{
+    height: 200px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+.liftlastbox h3 a{
+    color: black;
+}
+.liftlastbox h3 a:hover{
+    color: mediumaquamarine;
+}
+
+.liftlastboximg {
+    width: 200px;
+    height: 124px;
+    margin-top: 14px;
+    float: left;
+}
+.liftlastboxl{
+    width: 610px;
+    height: 100px;
+    padding: 20px;
+    float: left;
+}
+.liftlastboxshe{
+    width: 80px;
+    height: 25px;
+    background: mediumaquamarine;
+    display: block;
+    margin-top: 40px;
+    margin-left: 400px;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 2px;
+}
+
+.right{
+    float: right;
+    width: 280px;
+
+}
+.rightone{
+    width: 240px;
+    height: 472px;
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.rightone  .titleBut ul li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rightoneti{
+    position: relative;
+}
+.rightoneimg{
+    width: 240px;
+    height: 110px;
+    margin-bottom: 20px;
+    filter: brightness(75%);
+}
+.rightoneimg:hover{
+    filter: brightness(100%);
+
+}
+.rightone .titleBut ul{
+    position: relative;
+}
+.rightone .titleBut ul li{
+    padding-left: 30px;
+}
+.rightone .titleBut ul li::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 13px;
+    left: 7px;
+    background: #FF6600;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+}
+.rightone .titleBut ul li:first-child:before{
+    content: "1";
+
+}
+.rightone .titleBut ul li:nth-child(2):before{
+    content: "2";
+
+}
+.rightone .titleBut ul li:nth-child(3):before{
+    content: "3";
+
+
+}
+.rightone .titleBut ul li:nth-child(4):before{
+    content: "4";
+    background: #89919a;
+}
+.rightone .titleBut ul li:nth-child(5):before{
+    content: "5";
+    background: #89919a;
+}
+
+
+.righttwo{
+    width: 240px;
+    height: 690px;
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.righttwobox{
+    height: 60px;
+    margin-bottom: 20px;
+}
+.righttwoimg{
+    width: 70px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+.righttwoimgg{
+    position: relative;
+}
+.righttwoimgg .op{
+    color: white;
+}
+
+.righttwo p{
+    display: block;
+    width: 140px;
+    height: 40px;
+    float: left;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}
+
+.rightthree{
+    width: 240px;
+    height: 172px;
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+.rightthree a {
+    overflow: hidden;
+    width: 240px;
+    height: 172px;
+    display: block;
+}
+.rightthree a img{
+    width: 240px;
+    height: 172px;
+
+}
+.rightthree a img:hover{
+    transform: scale(1.2);
+}
+.rightfour{
+    width: 240px;
+    height: 506px;
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+.rightfour  .titleBut ul li::before{
+    content: '';
+    border-radius: 50%;
+    background: black;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+}
+.rightfour .titleBut ul li{
+    height: auto;
+}
+
+.rightsix{
+    width: 240px;
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 15px;
+}
+.rightsix ul{
+    line-height:2;
+}
+.rightsix ul a{
+    color: mediumaquamarine;
+}
+.rightsix img{
+    width: 193px;
+    height: 193px;
+    padding-top: 10px;
+    padding-left: 23px;
+}
+.rightseven{
+    width: 240px;
+    padding: 20px;
+    background: white;
+    margin-bottom: 20px;
+}
+.topp{
+    content: "";
+    width: 40px;
+    height: 40px;
+    z-index: 6;
+    position: fixed;
+    right: 20px;
+    bottom: 10%;
+    font-size: 14px;
+    background: black;
+
+}
+.topp a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+}
