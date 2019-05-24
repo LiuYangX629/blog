@@ -158,24 +158,138 @@ ul span:after{
     background: black;
     color: white;
 }
+
+/*navigation*/
+.con .conTop > ul{
+    margin-top: 35px;
+    margin-left: 5px;
+}
+.con .conTop > ul >li {
+    width: 16.6%;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.con .conTop > ul > li > a {
+    border-radius: 3px;
+    display: block;
+    border: 1px solid #EBEBEB;
+    margin: 0 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.conBottom > ul {
+    margin-top: 35px;
+    margin-left: 5px;
+}
+.conBottom >ul > li{
+    width: 16.6%;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.conBottom > ul >li >a{
+    border-radius: 3px;
+    display: block;
+    border: 1px solid #EBEBEB;
+    margin: 0 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 /******************************2019/5/16****************************************/
-header { width: 100%; padding: 5px 0; background: #1C2327; height: 50px; }
-header::before { background: #000 linear-gradient(to left, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55); content: ""; height: 5px; position: absolute; top: 0; width: 100%; }
-.logo { float: left; margin-right: 60px; line-height: 50px; color: #FFF; font-size: 22px }
-.logo a { color: #FFF }
-.logo img { margin-top: 14px; }
-.imgscale img { width: 100%; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; transition: all 0.5s; }
-.imgscale:hover img { transform: scale(1.1); }
+header {
+    width: 100%;
+    padding: 5px 0;
+    background: #1C2327;
+    height: 50px;
+}
+header::before {
+    background: #000 linear-gradient(to left, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+    content: "";
+    height: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.logo {
+    float: left;
+    margin-right: 60px;
+    line-height: 50px;
+    color: #FFF;
+    font-size: 22px
+}
+.logo a {
+    color: #FFF
+}
+.logo img {
+    margin-top: 14px;
+}
+.imgscale img {
+    width: 100%;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.imgscale:hover img {
+    transform: scale(1.1);
+}
 
-.lbox { width: 870px; float: left; overflow: hidden; margin-left: 145px; margin-top: 20px; }
+.lbox {
+    width: 870px;
+    float: left;
+    overflow: hidden;
+    margin-left: 145px;
+    margin-top: 20px;
+}
 
 
-.headline { width: 30%; float: right; overflow: hidden; }
-.headline ul { height: 260px; }
-.headline ul li { width: 100%; background: #000; overflow: hidden; height: 125px; margin-bottom: 10px; border-radius: 3px; position: relative }
-.headline ul li a { display: block; overflow: hidden; height: 100%; }
-.headline ul li img { width: 100%; height: 100%; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; transition: all 0.5s; opacity: .7; }
-.headline ul li:hover img { transform: scale(1.1); opacity: 1 }
+.headline {
+    width: 30%;
+    float: right;
+    overflow: hidden;
+}
+.headline ul {
+    height: 260px;
+}
+.headline ul li {
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    height: 125px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    position: relative
+}
+.headline ul li a {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+}
+.headline ul li img {
+    width: 100%;
+    height: 100%;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    transition: all 0.5s;
+    opacity: .7;
+}
+.headline ul li:hover img {
+    transform: scale(1.1);
+    opacity: 1
+}
 .headline ul li span { bottom: 0; position: absolute; top: 30%; left: 0; right: 0; color: #FFF; text-align: center; font-size: 15px; margin-top: 5px; padding: 0 40px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2; line-height: 24px; height: 48px; }
 
 .tab_buttons { margin-bottom: 10px; width: 100%; overflow: hidden; border-bottom: #e4e3e3 1px solid;/* position: relative; */ }
@@ -310,7 +424,7 @@ footer a { color: #73777a; }
 footer a:hover { color: #00C1DE }
 
 
-.lanmu img { height: 100px; float: left; margin-right: 20px; width: 400px;}
+.lanmu img { height: 100px; float: left; margin-right: 20px; width: 250px;}
 .lanmu h1 { font-size: 22px; margin-bottom: 15px }
 .lanmu p { color: #666 }
 /*
@@ -325,13 +439,48 @@ list2.html
 .liucheng li a:hover { color: #30a6de }
 
 /*pagelist*/
-.pagelist { text-align: center; color: #666; width: 100%; clear: both; margin: 0 0 10px; }
-.pagelist a { color: #666; margin: 0 5px 10px; padding: 5px 10px; background: #F7F7F7; display: inline-block; }
-.pagelist a:hover, .pagelist > b { color: #3690cf; color: #FFF; background: #1C2327; }
-.pagelist > b { padding: 5px 10px; }
-a.curPage { color: #19585d; font-weight: bold; }
+.pagelist {
+    text-align: center;
+    color: #666;
+    width: 100%;
+    clear: both;
+    margin: 0 0 10px;
+}
+.pagelist a {
+    color: #666;
+    margin: 0 5px 10px;
+    padding: 5px 10px;
+    background: #F7F7F7;
+    display: inline-block;
+}
+.pagelist a:hover, .pagelist > b {
+    color: #3690cf;
+    color: #FFF;
+    background: #1C2327;
+}
+.pagelist > b {
+    padding: 5px 10px;
+}
+a.curPage {
+    color: #19585d;
+    font-weight: bold;
+}
 /*cloud*/
-.cloud ul a { line-height: 24px; height: 24px; display: block; background: #999; float: left; padding: 3px 10px; margin: 10px 5px 0 0; border-radius: 3px; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; color: #FFF }
+.cloud ul a {
+    line-height: 24px;
+    height: 24px;
+    display: block;
+    background: #999;
+    float: left;
+    padding: 3px 10px;
+    margin: 10px 5px 0 0;
+    border-radius: 3px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #FFF
+}
 .cloud ul a:nth-child(8n-7) { background: #8A9B0F }
 .cloud ul a:nth-child(8n-6) { background: #EB6841 }
 .cloud ul a:nth-child(8n-5) { background: #3FB8AF }
