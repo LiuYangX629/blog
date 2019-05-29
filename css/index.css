@@ -147,7 +147,7 @@ bannerImg li a{
     cursor: pointer;
 }
 .btnList >li:hover{
-    background: #00C1DE;
+    /*background: #00C1DE;*/
 
 }
 
