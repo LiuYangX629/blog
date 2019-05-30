@@ -25,6 +25,9 @@ window.onload = function () {
         bannerPointer[i].onmouseleave =function () {
             this.style.backgroundColor=disactiveColor;
         }
+        bannerPointer[i].onclick = function () {
+            rightBtn.onclick();
+        }
     }
 
     let diaryList = document.getElementsByClassName("diaryList")[0];
@@ -71,6 +74,51 @@ window.onload = function () {
     })(i)
 }
 
+
+    //轮播图 bannerImg
+    /*
+    * index 保存窗口中显示图片下标
+    *
+    * */
+    let index = 0;
+    let leftBtn =document.querySelector(`.leftBtn`);
+    let rightBtn = document.querySelector(`.rightBtn`);
+    let bannerImg = document.querySelectorAll(`.bannerImg > li`);
+    // let btnLists =document.querySelectorAll(`btnList > li`);
+
+    leftBtn.onclick = function(){
+        if(index==0){
+            index=bannerImg.length;
+        }
+        index--;
+        bannerImg.forEach(function (ele) {
+            ele.style.zIndex=1;
+        });
+        bannerImg[index].style.zIndex=99;
+    };
+
+    setInterval(rightBtn.onclick=function () {
+        index++;
+        if(index==bannerImg.length){
+            index=0;
+        }
+        bannerImg.forEach(function (ele) {
+            ele.style.zIndex = 1;
+        });
+        bannerImg[index].style.zIndex=99;
+    },5000)
+    //每隔5000毫秒执行一次
+/*               end              */
+
+    /*    btnList     */
+    // for(let i=0;i<bannerPointer.length;i++) {
+    //     bannerPointer[i].onclick = function () {
+    //         for(let i=0;i<4;i++){
+    //             bannerImg[i]=style.visibility="hidden";
+    //         }
+    //         bannerImg[i]=style.visibility="visble";
+    //     };
+    // }
 
 
 
