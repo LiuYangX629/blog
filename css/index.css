@@ -145,10 +145,10 @@ img{
     background: #FFFFFF;
     list-style: none;
     cursor: pointer;
-
 }
-.btnList >li:hover{
-    /*background: #00C1DE;*/
+
+.btnList >li.hot{
+    background: #00C1DE;
 
 }
 
