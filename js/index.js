@@ -27,8 +27,8 @@ window.onload = function () {
         }
     }
 
-    let diaryList = document.getElementsByClassName("diaryList");
-    let listLi= diaryList.getElementsByTagName("li");
+    let diaryList = document.getElementsByClassName("diaryList")[0];
+    let listLi= diaryList.getElementsByTagName('li');
     for(let i=0;i<listLi.length;i++){
         listLi[i].onclick = function () {
             for(let j=0;j<listLi.length;j++){
@@ -38,6 +38,41 @@ window.onload = function () {
 
         }
     }
+
+
+    //bannerImg
+
+    //tabList
+    // let tabList = document.querySelector(`.tabList > li`);
+
+    //方法一
+    // let tabLists = document.querySelectorAll(`.tabList > li `);
+    //
+    // tabLists.forEach(function (elem,index) {
+    //     elem.onmouseenter = function () {
+    //         for(let i =0 ;i<tabLists.length;i++){
+    //             tabLists[i].classList.remove('hot');
+    //         }
+    //         this.classList.add('hot');
+    //     }
+    // })
+
+    //方法二
+    let tabLists =document.querySelectorAll(`.tabList > li`);
+    for(var i=0;i<tabLists.length;i++) {
+
+        tabLists[i].onmouseenter = (function(i){
+        return function () {
+            for(let j=0;j<tabLists.length;j++){
+                tabLists[j].classList.remove('hot');
+            }
+            tabLists[i].classList.add('hot');
+        }
+    })(i)
+}
+
+
+
 
 };
 

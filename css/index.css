@@ -94,17 +94,16 @@ img{
 .bannerLeft .bannerImg{
     width: 100%;
     height: 100%;
-
 }
 .bannerImg li{
     width: 100%;
     height: 100%;
-    list-style: none;
-    position: absolute; /*绝对的*/
+    position: absolute;
     left: 0;
     top: 0;
+    list-style: none;
 }
-bannerImg li a{
+.bannerImg li a{
     width: 100%;
     height: 100%;
     display: block;
@@ -135,8 +134,9 @@ bannerImg li a{
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    z-index:999;
 }
-.btnList>li{
+.btnList > li{
     width: 10px;
     height: 10px;
     margin-right: 14px;
@@ -145,6 +145,7 @@ bannerImg li a{
     background: #FFFFFF;
     list-style: none;
     cursor: pointer;
+
 }
 .btnList >li:hover{
     /*background: #00C1DE;*/
@@ -216,76 +217,71 @@ ul.bannerMid{
 }
 
 /**---------------------------------------------------------------------------------------------**/
-.note{
-    width:1200px;
-    height:310px ;
+
+.diary{
+    width: 1200px;
+    height: 310px;
     margin: 0 auto 20px;
     background: aliceblue;
 }
-
-.noteLeft{
-    width: 870px;
-    height: 280px;
-    background: oldlace;
+.diaryLeft{
+    width: 860px;
+    height: 270px;
     float: left;
-    border-radius:10px ;
-    padding: 15px;
-
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
 }
-
-.noteLeft ul{
-    border-bottom:1px solid #e4e3e3;
+.diaryList{
+    border-bottom: 1px solid #e4e3e3;
+    padding: 10px 0;
     overflow: hidden;
 }
-.noteLeft  li{
-    padding: 15px;
-    margin-right: 25px;
+/* 浮动带来的影响 ：父元素不能被撑开
+   清除浮动
+ */
+.diaryList li{
     float: left;
+    margin-right: 25px;
     list-style: none;
 }
-.noteLeft li a{
-    color: #333333;
-    font-size: 18px;
-    font-family: 微软雅黑;
+.diaryList li a{
+    color: #333;
+    font-size: 16px;
 }
-.noteTab{
+.diaryTab{
     width: 100%;
-    height: 220px;
-    background: oldlace;
+    height: 210px;
     margin-top: 10px;
-
 }
-/*275px
-  568px
-*/
+/* 275
+   568
+ */
 .tabImage{
-    width:275px ;
-    height:220px ;
+    width: 275px;
+    height: 100%;
     float: left;
-    background: #e6e6e6;
+    background: #046B80;
 }
-
-
 .tabList{
     width: 568px;
-    height:100% ;
+    height: 100%;
     float: right;
 }
-.tabList >li{
+.tabList > li{
     height: auto;
     padding: 0 30px 0 20px;
+    list-style: none;
 }
-
-.tabList>li >h1{
+.tabList > li > h1{
     height: 30px;
     line-height: 30px;
 }
-.tabList >li >h1 a{
+.tabList > li > h1  a{
     font-size: 16px;
     color: #333333;
 }
-
-.tabList> li > h1 span{
+.tabList > li > h1 span{
     width: 24px;
     height: 20px;
     display: inline-block;
@@ -296,31 +292,27 @@ ul.bannerMid{
     font-weight: normal;
     font-size: 14px;
 }
-.tabList>li.hot>p{
-    display: block;
-}
-.tabList> li>p{
+.tabList > li > p{
     font-size: 16px;
     line-height: 1.5;
     height: 48px;
-    display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp:2;
     overflow: hidden;
     color: #333333;
-    display: none;
     padding: 5px 0;
+    display: none;
 }
 .tabList > li.hot{
-    background: #F6F6F6;
+    background: #f6f6f6;
 }
-.tabList > li.hot >p{
+.tabList > li.hot > p{
     display: -webkit-box;
 }
-.tabList > li.hot > h1 >span{
+.tabList > li.hot > h1 > span{
     background: #000;
 }
-.tabList > li.hot >h1>a{
+.tabList > li.hot > h1 > a{
     color: #000;
 }
 
