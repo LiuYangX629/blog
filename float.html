@@ -17,7 +17,6 @@
         top: 0;
         left: 0;
         border-radius: 50%;
-        background-image: url("./image/HCY.png");
 
     }
 </style>
@@ -25,13 +24,16 @@
 
 <body>
 
-<div class="box"></div>
+<div class="box">
+    <a href="index.html"><img src="./image/HCY.png" alt=""></a>
+    <a href="./index.html"><img src="./image/HCY2.png" alt=""></a>
+</div>
 
 <script>
     window.onload=function () {
         let box = document.querySelector(`.box`);
-        let speedY=50;
-        let speedX=50;
+        let speedY=80;
+        let speedX=80;
         let maxH = window.innerHeight - parseInt(getComputedStyle(box,null).height);
         let maxW=window.innerWidth-parseInt(getComputedStyle(box,null).width);
         setInterval(function () {
