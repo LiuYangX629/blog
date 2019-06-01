@@ -77,48 +77,51 @@ window.onload = function () {
         // }
     }
     //轮播图 bannerImg
-    /*
+    /*current 保存窗口中显示图片下标
     * index 保存窗口中显示图片下标
-    *
+    *next 下一张图片
     * */
-    let index = 0;
+    let current = 0,next = 0;
     let leftBtn =document.querySelector(`.leftBtn`);
     let rightBtn = document.querySelector(`.rightBtn`);
     let bannerImg = document.querySelectorAll(`.bannerImg > li`);
+    let w =bannerImg[0].offsetWidth;
     // let btnLists =document.querySelectorAll(`btnList > li`);
 
-    leftBtn.onclick = function(){
-        if(index==0){
-            index=bannerImg.length;
-        }
-        index--;
-        bannerImg.forEach(function (ele) {
-            ele.style.zIndex=1;
-        });
-        Array.prototype.forEach.call(bannerPointer,function (elem) {
-            elem.classList.remove("hot");
-        });
-        bannerPointer[index].classList.add("hot");
-        bannerImg[index].style.zIndex=99;
-    };
-
-        rightBtn.onclick=function () {
-        index++;
-        if(index==bannerImg.length){
-            index=0;
-        }
-        bannerImg.forEach(function (ele) {
-            ele.style.zIndex = 1;
-        });
-        Array.prototype.forEach.call(bannerPointer,function (elem) {
-            elem.classList.remove("hot");
-        });
-        bannerPointer[index].classList.add("hot");
-        bannerImg[index].style.zIndex=99;
-    }
-    //每隔5000毫秒执行一次
-    let t = setInterval(rightBtn.onclick,1000);
-/*               end              */
+    // leftBtn.onclick = function(){
+    //     if(index==0){
+    //         index=bannerImg.length;
+    //     }
+    //     index--;
+    //     bannerImg.forEach(function (ele) {
+    //         ele.style.zIndex=1;
+    //     });
+    //     Array.prototype.forEach.call(bannerPointer,function (elem) {
+    //         elem.classList.remove("hot");
+    //     });
+    //     bannerPointer[index].classList.add("hot");
+    //     bannerImg[index].style.zIndex=99;
+    // };
+    //
+//         rightBtn.onclick=function () {
+//         index++;
+//         if(index==bannerImg.length){
+//             index=0;
+//         }
+//         bannerImg.forEach(function (ele) {
+//             ele.style.zIndex = 1;
+//             animate(ele,{opacity: 0})
+//         });
+//         Array.prototype.forEach.call(bannerPointer,function (elem) {
+//             elem.classList.remove("hot");
+//         });
+//         bannerPointer[index].classList.add("hot");
+//         bannerImg[index].style.zIndex=99;
+//         animate(bannerImg[index],{opacity:1})
+//     };
+//     //每隔5000毫秒执行一次
+//     let t = setInterval(rightBtn.onclick,1000);
+// /*               end              */
 
     /*    btnList     */
     // for(let i=0;i<bannerPointer.length;i++) {
@@ -130,34 +133,62 @@ window.onload = function () {
     //     };
     // }
 
+    rightBtn.onclick = function(){
+        next++;
+
+        if(next == bannerImg.length){
+            next = 0;
+        }
+        bannerImg[next].style.left = w+ 'px';
+
+        animate(bannerImg[current],{left:-w});
+        animate(bannerImg[next],{left:0});
+        current = next;
+    };
+
+    leftBtn.onclick = function(){
+        next--;
+        if(next<0){
+            next = bannerImg.length -1;
+        }
+        bannerImg[next].style.left = -w+ 'px';
+
+        animate(bannerImg[current],{left:+w});
+        animate(bannerImg[next],{left:0});
+        current = next;
+    };
+
+    let t = setInterval(rightBtn.onclick,3000);
+    //每3000毫秒执行一次
+
     /*
     * 轮播移入和移出（鼠标在图上时停止轮播）
     * */
     let bannerLeft = document.querySelector('.bannerLeft');
-    bannerLeft.onmouseenter=function () {
-        clearInterval(t);
-    };
-    bannerLeft.onmouseleave = function () {
-        t= setInterval(rightBtn.onclick,1000);
-    };
-
-    for(var i=0;i<bannerPointer.length;i++){
-        bannerPointer[i].lxy=i;
-        bannerPointer[i].onclick=function () {
-            index=this.lxy;
-            Array.prototype.forEach.call(bannerPointer,function (elem) {
-                elem.classList.remove("hot");
-            });
-            bannerImg.forEach(function (ele) {
-                ele.style.zIndex=1;
-            });
-            this.classList.add("hot");
-            // console.log(i);
-            bannerImg[this.lxy].style.zIndex=99;
-
-
-        }
-    }
+    // bannerLeft.onmouseenter=function () {
+    //     clearInterval(t);
+    // };
+    // bannerLeft.onmouseleave = function () {
+    //     t= setInterval(rightBtn.onclick,1000);
+    // };
+    //
+    // for(var i=0;i<bannerPointer.length;i++){
+    //     bannerPointer[i].lxy=i;
+    //     bannerPointer[i].onclick=function () {
+    //         index=this.lxy;
+    //         Array.prototype.forEach.call(bannerPointer,function (elem) {
+    //             elem.classList.remove("hot");
+    //         });
+    //         bannerImg.forEach(function (ele) {
+    //             ele.style.zIndex=1;
+    //         });
+    //         this.classList.add("hot");
+    //         // console.log(i);
+    //         bannerImg[this.lxy].style.zIndex=99;
+    //
+    //
+    //     }
+    // }
 
 };
 

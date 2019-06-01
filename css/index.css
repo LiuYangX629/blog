@@ -90,19 +90,25 @@ img{
     background: oldlace;
     float: left;
     position: relative;/*相对的*/
+    overflow: hidden;
 }
 .bannerLeft .bannerImg{
     width: 100%;
     height: 100%;
+
 }
-.bannerImg li{
+.bannerImg > li{
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 0;
+    left: 620px;
     top: 0;
     list-style: none;
 }
+.bannerImg > li:first-child{
+    left: 0;
+}
+
 .bannerImg li a{
     width: 100%;
     height: 100%;
