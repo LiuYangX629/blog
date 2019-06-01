@@ -71,7 +71,7 @@ window.onload = function () {
         };
         bannerPointer[i].onmouseleave =function () {
             this.style.backgroundColor=disactiveColor;
-        }
+        };
         // bannerPointer[i].onclick = function () {
         //     rightBtn.onclick();
         // }
@@ -86,6 +86,7 @@ window.onload = function () {
     let rightBtn = document.querySelector(`.rightBtn`);
     let bannerImg = document.querySelectorAll(`.bannerImg > li`);
     let w =bannerImg[0].offsetWidth;
+    let flag =true;
     // let btnLists =document.querySelectorAll(`btnList > li`);
 
     // leftBtn.onclick = function(){
@@ -134,27 +135,42 @@ window.onload = function () {
     // }
 
     rightBtn.onclick = function(){
+        if(!flag){
+            return ;
+        }
+        flag =false;
         next++;
-
         if(next == bannerImg.length){
             next = 0;
         }
         bannerImg[next].style.left = w+ 'px';
 
         animate(bannerImg[current],{left:-w});
-        animate(bannerImg[next],{left:0});
+        animate(bannerImg[next],{left:0},function () {
+            flag=true;
+        });
+        bannerPointer[current].classList.remove('hot');
+        bannerPointer[next].classList.add('hot');
         current = next;
     };
 
     leftBtn.onclick = function(){
+        if(!flag){
+            return ;
+        }
+        flag =false;
         next--;
         if(next<0){
             next = bannerImg.length -1;
         }
         bannerImg[next].style.left = -w+ 'px';
 
-        animate(bannerImg[current],{left:+w});
-        animate(bannerImg[next],{left:0});
+        animate(bannerImg[current],{left:w});
+        animate(bannerImg[next],{left:0},function () {
+            flag=true;
+        });
+        bannerPointer[current].classList.remove('hot');
+        bannerPointer[next].classList.add('hot');
         current = next;
     };
 
@@ -165,12 +181,12 @@ window.onload = function () {
     * 轮播移入和移出（鼠标在图上时停止轮播）
     * */
     let bannerLeft = document.querySelector('.bannerLeft');
-    // bannerLeft.onmouseenter=function () {
-    //     clearInterval(t);
-    // };
-    // bannerLeft.onmouseleave = function () {
-    //     t= setInterval(rightBtn.onclick,1000);
-    // };
+    bannerLeft.onmouseenter=function () {
+        clearInterval(t);
+    };
+    bannerLeft.onmouseleave = function () {
+        t= setInterval(rightBtn.onclick,3000);
+    };
     //
     // for(var i=0;i<bannerPointer.length;i++){
     //     bannerPointer[i].lxy=i;
@@ -189,6 +205,30 @@ window.onload = function () {
     //
     //     }
     // }
+
+    //用轮播点左右切换
+    for(let i=0;i<bannerPointer.length;i++){
+        bannerPointer[i].onclick=function () {
+            if(current ==i){
+                return ;
+            }
+            next = i;
+            if(next > current){
+                bannerImg[next].style.left=w+'px';
+                animate(bannerImg[current],{left:-w});
+                animate(bannerImg[next],{left:0});
+            }else {
+                bannerImg[next].style.left=-w+'px';
+                animate(bannerImg[current],{left:w});
+                animate(bannerImg[next],{left:0});
+            }
+            bannerPointer[current].classList.remove('hot');
+            bannerPointer[next].classList.add('hot');
+
+            current=next;
+        }
+
+    }
 
 };
 
