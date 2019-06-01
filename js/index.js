@@ -212,19 +212,18 @@ window.onload = function () {
             if(current ==i){
                 return ;
             }
-            next = i;
+            next = i;//如果点击同一个点，则不会有动画动作
             if(next > current){
                 bannerImg[next].style.left=w+'px';
                 animate(bannerImg[current],{left:-w});
-                animate(bannerImg[next],{left:0});
+                animate(bannerImg[next],{left:0}); //如果鼠标点击的（next）>当前的（current） 则向左切换页面
             }else {
                 bannerImg[next].style.left=-w+'px';
                 animate(bannerImg[current],{left:w});
-                animate(bannerImg[next],{left:0});
+                animate(bannerImg[next],{left:0});  //next < current ，向右
             }
             bannerPointer[current].classList.remove('hot');
             bannerPointer[next].classList.add('hot');
-
             current=next;
         }
 
