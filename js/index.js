@@ -228,6 +228,50 @@ window.onload = function () {
         }
 
     }
+       /*
+    * 按需加载图片
+    * 页面滚动距离+ 窗口高度 >=元素到文档的高度
+    * img.src =img.aa
+    * */
+
+
+    let viewH = window.innerHeight;
+    let imgs = document.querySelectorAll(".lazyload");
+    let positionArr =[];
+    imgs.forEach(function (ele) {
+        let parent=ele.offsetParent;
+        positionArr.push(parent.offsetTop+ele.offsetTop);
+    });
+
+
+    window.onscroll =function () {
+        let scrolltop= document.documentElement.scrollTop|| document.body.scrollTop;
+        for(let i=0;i<positionArr.length;i++){
+            if(scrolltop+viewH>=positionArr[i]+50){
+                if(!imgs[i].src){
+                    imgs[i].src = imgs[i].getAttribute('aa');
+                }
+            }
+        }
+        console.log(scrolltop);
+    }
+
+    // let viveH=window.innerHeight;
+    // let imglan=document.querySelectorAll('.lazyload');
+    // let positionA=imglan[0].offsetTop;
+    // window.onscroll=function(){
+    //     let scrolltop=document.documentElement.scrollTop;
+    //     console.log(scrolltop);
+    //     if(scrolltop+viveH>=positionA+100){
+    //         console.log(!imglan[0].src);
+    //
+    //         imglan[0].src=imglan[0].getAttribute('aa');
+    //
+    //     }
+    // };
+
+
+
 
 };
 
