@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="css/part2.css">
     <link rel="stylesheet" href="css/part3.css">
+    <script src="js/message.js"></script>
 </head>
 <body>
     <div class="header">
@@ -24,8 +25,6 @@
             <div class="search"></div>
         </div>
     </div>
-
-
     <article>
         <div class="whitebg">
             <h2 class="htitle">留言</h2>
@@ -64,8 +63,6 @@
                         </p>
                     </form>
                 </div>
-
-
                 <div class="fb">
                     <ul>
                         <span class="tximg"><img src="./image/tx5.jpg"></span>
@@ -74,18 +71,11 @@
                         <p class="fbinfo">模板更新了可以给我们用吗？</p>
                     </ul>
                 </div>
-
-
                 <div class="hf">
                     <ul>
-                        <p class="zzhf"><font color="#FF0000">站长回复:</font>购买，请加青青微信。476847113</p>
+                        <p class="zzhf"><font color="#FF0000">站长回复:</font>购买.</p>
                     </ul>
                 </div>
-
-
-
-
-
                 <div class="fb">
                     <ul>
                         <span class="tximg"><img src="./image/tx3.jpg"></span>
@@ -94,40 +84,27 @@
                         <p class="fbinfo">你好！这是我第一个留言的。</p>
                     </ul>
                 </div>
-
-
                 <div class="hf">
                     <ul>
                         <p class="zzhf"><font color="#FF0000">站长回复:</font>你好，欢迎您访问我的网站</p>
                     </ul>
                 </div>
-
-
-
-
-
                 <div class="clear"></div>
                 <div class="pagelist"></div>
-
                 <script>
                     function myFun(sId) {
-
                         var oImg = document.getElementsByTagName('img');
-
                         for (var i = 0; i < oImg.length; i++) {
                             if (oImg[i].id == sId) {
                                 oImg[i].previousSibling.previousSibling.checked = true;
                                 oImg[i].style.opacity = '1';
                             } else {
-                                oImg[i].style.opacity = '.8';
-
+                                oImg[i].style.opacity = '0.7';
                             }
                         }
                     }
                 </script>
             </div>
-            <!--newsinfo end-->
-
         </div>
     </article>
 </body>
