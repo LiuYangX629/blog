@@ -78,3 +78,9 @@ li.hot:nth-child(3)~.top1{
 .content > li > time{
     float: right;
 }
+
+del{
+    float: right;
+    margin-left: 20px;
+    text-decoration: none;
+}
