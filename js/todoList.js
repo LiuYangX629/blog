@@ -6,16 +6,16 @@ window.addEventListener('load',function () {
     let flag ={all:'all',done:true,doing:false};
     let todolist =[
         {
-            id:1, content:"端午节要交作业" , ctime:"2019/5/29" ,status:false
+            id: 1, content:"端午节要交作业" , ctime:"2019/5/29" ,status:false
         },
         {
-            id:4, content:"不想交作业" , ctime:"2019/6/12" ,status:false
+            id: 4, content:"不想交作业" , ctime:"2019/6/12" ,status:false
         },
         {
             id:3, content:"企业文档" , ctime:"2019/6/10" ,status:true
         },
         {
-            id:2, content:"不想交作业" , ctime:"2019/5/30" ,status:false
+            id:2, content:"123" , ctime:"2019/5/30" ,status:true
         }
     ];
 
@@ -75,7 +75,7 @@ window.addEventListener('load',function () {
         arr.forEach(function (elem,index) {
             if(elem.status){
                 html+=`
-            <li>
+            <li id="${elem.id}">
             <input type="checkbox" checked>
              <p>${elem.content}</p>
              <del>X</del>
@@ -85,10 +85,10 @@ window.addEventListener('load',function () {
             `;
             }else{
                 html+=`
-            <li>
+            <li id="${elem.id}">
             <input type="checkbox"> 
             <p>${elem.content}</p>
-                         <del>X</del>
+             <del>X</del>
              <time>${elem.ctime}</time>
         </li>
             `;
