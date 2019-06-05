@@ -44,14 +44,50 @@ window.addEventListener('load',function () {
       let id = target.parentNode.id;
 
       if(target.nodeName=="DEL"){
+          // id
+          // splice() -> index -> findIndex()
+          //变异方法 非变异方法
+          // todolist = todolist.filter(ele=>ele.id==id)
             let index =todolist.findIndex(ele=>ele.id==id);
             todolist.splice(index,1);
             render(filterData(type));
         }else if(target.nodeName=="INPUT"){
-
+          //id -> 数组元素 -> true false (input checked)
+          //1. findIndex
+          //2. find
+          //3. filter
+          let ele =todolist.filter(ele=>ele.id==id)[0];
+          ele.status = target.checked;
+          //ele.status
       }
+      render( filterData(type) );
     };
 
+    ///////////////////createObj//////////////////////
+    let forms = document.forms[0];
+    let textBtn = forms.elements["content"];
+    let submitBtn =forms.elements[1];
+
+    submitBtn.onclick=function (e) {
+        e.preventDefault();
+        let obj = createObj();
+        todolist.push(obj);
+        forms.reset();
+        render(filterData(type));
+    };
+
+
+    ///////////////////////////////////////
+
+    function createObj() {
+        let id =todolist[todolist.length-1].id + 1;
+        let content =textBtn.value;
+        let ctime =new Date().toLocaleDateString();
+        let status =false;
+        return {id,content,ctime,status};
+    }
+
+    /////////////////////////////////////////////
     function filterData(type) {
         let arr=[];
         switch (type){
@@ -96,3 +132,7 @@ window.addEventListener('load',function () {
         content.innerHTML=html;
     }
 });
+
+
+
+
