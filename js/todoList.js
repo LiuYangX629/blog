@@ -40,17 +40,16 @@ window.addEventListener('load',function () {
 
 
     content.onclick =function (e) {
-        let arr=[];
       let target =e.target;
       let id = target.parentNode.id;
 
-        if(target.nodeName==="INPUT"){
-            // console.log(1);
-        }else if(target.nodeName==="DEL"){
-            let index =todolist.findIndex(ele=>ele.id===id);
+      if(target.nodeName=="DEL"){
+            let index =todolist.findIndex(ele=>ele.id==id);
             todolist.splice(index,1);
             render(filterData(type));
-        }
+        }else if(target.nodeName=="INPUT"){
+
+      }
     };
 
     function filterData(type) {
